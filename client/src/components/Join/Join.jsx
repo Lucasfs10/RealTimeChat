@@ -13,7 +13,7 @@ function Join({ chatSet, setSocket }) {
 
         if (!username.trim()) return
         alert(username);
-        const socket = await io.connect('http://localhost:3001')
+        const socket = await io.connect('https://chattimr.onrender.com/')
         socket.emit('set_username', username)
         setSocket(socket)
         chatSet(true)
